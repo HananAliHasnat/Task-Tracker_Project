@@ -1,0 +1,26 @@
+name: Frontend CI
+
+# Trigger workflow on push to main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    name: Validate Frontend Files
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Validate that required files exist
+      - name: Validate frontend files
+        run: |
+          echo "Checking required files..."
+          test -f index.html
+          test -f style.css
+          test -f script.js
+          echo "All required files are present"
