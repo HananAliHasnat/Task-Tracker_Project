@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Office Daily Log</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Office Daily Log</h1>
+
+        <!-- Date Section -->
+        <div class="section">
+            <strong>Date:</strong>
+            <span id="currentDate"></span>
+        </div>
+
+        <!-- Check In / Check Out -->
+        <div class="section">
+            <button id="checkInBtn" class="btn btn-primary">Check In</button>
+            <p>Check In Time: <span id="checkInTime">--</span></p>
+        </div>
+
+        <div class="section">
+            <button id="checkOutBtn" class="btn btn-secondary">Check Out</button>
+            <p>Check Out Time: <span id="checkOutTime">--</span></p>
+        </div>
+
+        <!-- Topics Covered -->
+        <div class="section">
+            <h3>Topics Covered</h3>
+            <textarea id="topicsInput" placeholder="Enter topics covered today..."></textarea>
+            <br>
+            <button id="saveTopicsBtn" class="btn btn-primary">Save Topics</button>
+
+            <h4>Saved Topics:</h4>
+            <p id="savedTopics">--</p>
+        </div>
+
+        <!-- Past entries / history -->
+        <div class="section">
+            <h3>Past Entries</h3>
+            <div id="history" aria-live="polite">
+                <!-- History cards will be rendered here by script.js -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
